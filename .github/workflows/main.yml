@@ -39,22 +39,6 @@ jobs:
         
       - name: Running tests
         run: npm test
-  curl:
-   runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-   steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Using node different versions
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-
-      # Runs a set of commands using the runners shell
-      - name: Install dependencies
-        run: npm i
       - name: Start server
         run: npm start
       - name: curl

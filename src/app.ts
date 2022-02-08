@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { sumRequest } from './sum';
 
-const app: express.Application = express();
+export const app: express.Application = express();
 
 
 const PORT: number = 8080;

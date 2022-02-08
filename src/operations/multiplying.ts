@@ -1,6 +1,6 @@
 import express from 'express';
 
-export const sumRequest = async(req: express.Request, res: express.Response) => {
+export const multiply = async (req: express.Request, res: express.Response) => {
     let values: any[];
     try {
         values = JSON.parse(req.body.payload);
@@ -10,6 +10,6 @@ export const sumRequest = async(req: express.Request, res: express.Response) => 
         return res.status(400).send("Invalid request");
     }
     console.log(values);
-    const obj = {result: values.reduce((a: number, b: number) => a+b, 0)}
+    const obj = { result: values.reduce((a: number, b: number) => a * b, 1) }
     res.status(200).json(obj);
-};
+}

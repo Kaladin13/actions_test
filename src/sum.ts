@@ -10,6 +10,6 @@ export const sumRequest = async(req: express.Request, res: express.Response) => 
         return res.status(400).send("Invalid request");
     }
     console.log(values);
-    const obj = {result: values.reduce((a: number, b: number) => a+b, 0)}
+    const obj = {result: values.reduce((a: number, b: number) => a-b, 0)}
     res.status(200).json(obj);
 };

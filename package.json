@@ -4,8 +4,8 @@
   "description": "actions_test",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/app.js",
-    "test": "npx jest --force-exit"
+    "start": "tsc && node build/server.js",
+    "test": "npx jest --force-exit --maxWorkers=1"
   },
   "repository": {
     "type": "git",

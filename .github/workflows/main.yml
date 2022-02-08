@@ -43,5 +43,5 @@ jobs:
         run: npm start &
       - name: curl
         run: |
-            curl -s -X POST http://localhost:8000/sum -H 'Content-Type: application/json' -d '[1,2,3,4]' | jq '. | .result'
+            curl -s -X POST http://localhost:8080/sum -H 'Content-Type: application/json' -d '[1,2,3,4]' | jq '. | .result'
   

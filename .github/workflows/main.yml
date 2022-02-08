@@ -40,7 +40,7 @@ jobs:
       - name: Running tests
         run: npm test
       - name: Start server
-        run: npm start
+        run: npm start &
       - name: curl
         run: |
             curl -s -X POST http://localhost:8000/sum -H 'Content-Type: application/json' -d '[1,2,3,4]' | jq '. | .result'
